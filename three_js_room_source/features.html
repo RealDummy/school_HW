@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ASGN 5</title>
+    <style>
+        body{
+            margin: 5em;
+            background-color: #353535;
+            color: #fff;
+        }
+        a{
+            color: #26d6d6
+        }
+        a:visited{
+            color: #c717b8
+        }
+        img{
+            border: 2px solid black;
+        }
+        a img {
+            border-color: #26d6d6;
+        }
+        a:visited img{
+            border-color: #c717b8;
+        }
+        p{
+            width: 60%;
+            margin-right:auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Assignment 5</h1>
+    <h3>Features</h3>
+    <h3>Sam Wortzman</h3>
+    <p>swortzma 6/3/21</p>
+    <p>Click on the scene to lock the mouse and look around.<br> Press escape to regain control of the mouse. <br>
+        Press space to turn the lamp off or on.</p><br>
+    <h3>Credit</h3>
+    <p>Floor texture and normal map are from <a href='https://www.filterforge.com/filters/4339.html'>https://www.filterforge.com/filters/4339.html</a></p>
+    <p>Fire Sound is from <a href='https://www.youtube.com/watch?v=jG64aIasFiw'>https://www.youtube.com/watch?v=jG64aIasFiw</a></p>
+    <p>The rest of the geometries are either from THREE.js or made by me.</p>
+    <a href="https://people.ucsc.edu/~swortzma/driver.html">
+        take me to the project!<br>
+        <img src="Screenshot.png">
+    </a>
+    <h3>Details</h3>
+    <p>Most of the models, anything loaded with the GLTF loader, is made in blender by me. The fire is made with some 
+    fire colored cones moving up and down based on some perlin noise, and also moving in a circular pattern perpindicular to the up axis.
+    The movement is based off perlin noise, instead of random numbers, to give it some sort of consistency to the random values from one frame 
+    to the next. The light from the flame is the average position and brightness of all the particles. That is why the shadows dance around. Since 
+    the position of the fire particles aren't random, there is a nice consistency to the shadows. The lamp is stationary, so its shadows do not move.
+    <br><br>
+    Although the window looks bright, it only exists as a reason for the ambient light to exist. The trickiest part of this assignment was getting
+    the fire to have a bloom effect, while also having the window and lamp to not be too "bright." This requires an initial rendering of just the fire
+    particles to a texture, and then applying bloom to the texture. After, the rest of the scene is rendered. Then the bloom effect from the fire particles 
+    is overlayed on the rendered scene, and displayed to the viewer. 
+    <br><br>
+    Three.js made all of this fairly easy to do, and it probably runs on any computer
+    that can run minecraft. I made some optimizations, but a very solid chunk of the time is devoted to rendering the shadows, which could have been lower quality,
+    but my computer can run it, so it's good enough. </p>
+</body>
+</html>

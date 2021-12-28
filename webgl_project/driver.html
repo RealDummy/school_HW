@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ASGN 3</title>
+    <link  rel="stylesheet" href="style.css"></link>
+    <script src="cuon-matrix-cse160.js"></script> <!-- NOT MY CODE -->
+    <script src="asgn3.js"></script>
+</head>
+<body onload="main()">
+    <canvas id="canvas" width=500 height=500>
+        ur browser doesnt support html canvas
+    </canvas><br>
+  <div class="input">
+    <div class="controls object">
+        <p>Object Controls</p>
+        <label for="edgeCountInput">Edge Count: </label>
+        <input type="number" id="edgeCountInput" value="50" min="2" max="1000"><br>
+        <label for="renderType">Shading: </label>
+        <select id="renderType">
+            <option name="smooth">smooth</option>
+            <option name="flat">flat</option>
+            <option name="wireframe">wireframe</option>
+        </select>
+    </div>
+    <div class="controls DLight">
+        <p>Directional Light</p>
+        <form id="DLightForm">
+            <label for=DirectionalX>X:</label>
+            <input id="DirectionalX" type="range" min="-100" max="100" value="0"><br>
+            <label for=DirectionalY>Y:</label>
+            <input id="DirectionalY" type="range" min="-100" max="100" value="0"><br>
+            <label for=DirectionalZ>Z:</label>
+            <input id="DirectionalZ" type="range" min="-100" max="100" value="10"><br><br>
+
+            <label for=DirectionalR>R:</label>
+            <input id="DirectionalR" type="range" min="0" max="255" value="255"><br>
+            <label for=DirectionalG>G:</label>
+            <input id="DirectionalG" type="range" min="0" max="255" value="255"><br>
+            <label for=DirectionalB>B:</label>
+            <input id="DirectionalB" type="range" min="0" max="255" value="255"><br><br>
+						<label for="DLightToggle">Active:</label>
+            <input type="checkbox" id="DLightToggle" checked="true">
+
+        </form>
+        
+    </div>
+    <div class = "controls PLight">
+        <p>Point Light</p>
+        <form id="PLightForm">
+            <label for=DirectionalX>X:</label>
+            <input id="PointX" type="range" min="-100" max="100" value="20"><br>
+            <label for=PointY>Y:</label>
+            <input id="PointY" type="range" min="-100" max="100" value="0"><br>
+            <label for=PointZ>Z:</label>
+            <input id="PointZ" type="range" min="-100" max="100" value="10"><br><br>
+
+            <label for=PointR>R:</label>
+            <input id="PointR" type="range" min="0" max="255" value="255"><br>
+            <label for=PointG>G:</label>
+            <input id="PointG" type="range" min="0" max="255" value="0"><br>
+            <label for=PointB>B:</label>
+            <input id="PointB" type="range" min="0" max="255" value="0"><br><br>
+          <label for="PLightToggle">Active:</label>
+            <input type="checkbox" id="PLightToggle" checked="true">
+        </form>
+    </div>
+  </div>
+    
+    
+</body>

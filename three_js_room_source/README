@@ -1,0 +1,9 @@
+TO SEE THIS CODE RUN GO TO  https://people.ucsc.edu/~swortzma/driver.html
+
+This is just the source code, modules dont work local!
+
+I did not make Three.js (duh), fire.ogg , or floor_normal.jpg / floor.jpg. 
+Everything else is made by me in blender or javascript.
+
+I am really proud of the fire that I made, It uses perlin noise and three.js cone shape to make a fairly good looking fire. I had
+about a week to work on this project, we were givin two weeks, but I was going to be in yosemite for the second week.

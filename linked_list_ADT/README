@@ -1,0 +1,32 @@
+Shuffle.cpp
+List.cpp
+List.h
+ListTest.c
+Makefile
+README
+
+Shuffle.cpp: Takes one arg, an integer, and outputs from 1 to arg how many times it takes 
+for the perfect shuffle to return a deck of i cards to it's original state.
+
+List.cpp: definitions for List.h.
+
+List.h: List ADT implemeted with a doubly linked list.
+
+ListTest.cpp: Tests the List ADT.
+
+Makefile: Compiles the code. Look at the file to know what it do. type make, or make then one of the extensionless commands in there.
+
+README: this
+
+Design Decisions:
+I made clean use a hash table (MicroHash) thing because it is the only way to remove duplicates in 
+O(N) time, where n is the number of elements in the List.
+For the hashing function I used Pearson's hash, I found the psudocode for it online.
+
+For Shuffle, I made an array of integers in order to shuffle the deck, inserting the values in the list to where they should end up,
+then I cleared the list, and inserted the values back in, in order of the array. Also I check it against the math formula provided in 
+page 3 of "The mathematics of perfect shuffles" paper that states "The order of the in shuffle permutation is the order of 2
+(mod2n + 1)." This was a lemma :(. Thanks to my Math tutor for helping me understand that.
+
+I also const'd a lot of functions and added iterator and const iterator classes, in order to loop through the list even when it
+is const, which is not possible without some sort of iterator.
